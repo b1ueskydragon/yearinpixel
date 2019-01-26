@@ -9,35 +9,21 @@
     <title>A Year In Pixel</title>
   </head>
   <body>
-    <table border="1">
+  <form:form modelAttribute="everydaySearch" method="get">
+    <div>
+      <table border="1">
       <tr>
-        <td>Jan</td>
-        <td>Feb</td>
-        <td>Mar</td>
-        <td>Apr</td>
-        <td>May</td>
-        <td>Jun</td>
-        <td>Jul</td>
-        <td>Aug</td>
-        <td>Sep</td>
-        <td>Oct</td>
-        <td>Nov</td>
-        <td>Dec</td>
+        <td><c:out value="day"/></td>
+        <td><c:out value="pixel"/></td>
       </tr>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-      </tr>
-    </table>
+      <c:forEach items="${everydaySearch.everydays}" var="list">
+        <tr>
+          <td><c:out value="${list.today}"/></td>
+          <td><c:out value="${list.color}"/></td>
+        </tr>
+      </c:forEach>
+      </table>
+    </div>
+  </form:form>
   </body>
 </html>
