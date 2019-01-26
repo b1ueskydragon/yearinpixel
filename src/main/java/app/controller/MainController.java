@@ -7,8 +7,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class MainController {
 
-  @RequestMapping(value = {"", "/everydays"}, method = RequestMethod.GET)
+  @RequestMapping(value = "/everydays", method = RequestMethod.GET)
   public String showList() {
+    System.out.println();
     return "everydays";
   }
 }
