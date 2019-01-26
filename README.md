@@ -18,7 +18,7 @@ $ vi ${HOME_DIR}/apache-tomcat-8.5.23/conf/Catalina/localhost/yearinpixel.xml
 ```
 ```yearinpixel.xml
 <Context docBase="${HOME_DIR}/yearinpixel/target/yearinpixel"  reloadable="true">
-        <Resource name="yearinpixelDB" type="javax.sql.DataSource"
+        <Resource name="jdbc/yearinpixelDB" type="javax.sql.DataSource"
         auth="Container" driverClassName="com.mysql.jdbc.Driver"
         url="jdbc:mysql://localhost/yearinpixel_db?
         userUnicode=true&amp;charactorEncoding=UTF-8&amp;autoReconnect=true"
@@ -32,10 +32,7 @@ $ vi ${HOME_DIR}/apache-tomcat-8.5.23/conf/Catalina/localhost/yearinpixel.xml
 ### mysql dump (for manual operation on initial stage)
 
 ```.sh
-# out
 mysqldump -u ${USERNAME} -p -h ${HOSTNAME} yearinpixel_db > yearinpixel.dump
 
-# in
 mysqldump -u ${USERNAME} -p -h ${HOSTNAME} yearinpixel_db < yearinpixel.dump
 ```
-
