@@ -19,11 +19,21 @@
       <c:forEach items="${everydaySearch.everydays}" var="list">
         <tr>
           <td><c:out value="${list.today}"/></td>
-          <td><c:out value="${list.color}"/></td>
+          <td id="score"><c:out value="${list.color}"/></td>
         </tr>
       </c:forEach>
       </table>
     </div>
   </form:form>
   </body>
+
+<script type='text/javascript'>
+  (() =>
+    {
+      'use strict';
+      const score = document.getElementById('score');
+
+     })();
+</script>
+
 </html>
