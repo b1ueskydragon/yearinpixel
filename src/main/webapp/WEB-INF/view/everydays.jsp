@@ -6,6 +6,7 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link href="<c:url value="/resources/css/style.css" />" rel="stylesheet">
     <title>A Year In Pixel</title>
   </head>
   <body>
@@ -19,21 +20,12 @@
       <c:forEach items="${everydaySearch.everydays}" var="list">
         <tr>
           <td><c:out value="${list.today}"/></td>
-          <td id="score"><c:out value="${list.color}"/></td>
+          <!-- TODO make a var -->
+          <td class="${list.color}"><c:out value="${list.color}"/></td>
         </tr>
       </c:forEach>
       </table>
     </div>
   </form:form>
   </body>
-
-<script type='text/javascript'>
-  (() =>
-    {
-      'use strict';
-      const score = document.getElementById('score');
-
-     })();
-</script>
-
 </html>

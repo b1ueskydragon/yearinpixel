@@ -4,6 +4,7 @@ import app.entity.EverydayMaster;
 
 import java.sql.Date;
 import java.util.List;
+import java.util.Map;
 
 public class EverydaySearch {
 
@@ -19,8 +20,10 @@ public class EverydaySearch {
 
   private Date createTime;
 
-  // TODO update_time
+  // TODO color mapping in server?
+  private Map<Integer, String> colorDict;
 
+  // TODO update_time
 
   public List<EverydayMaster> getEverydays() {
     return everydays;
@@ -62,4 +65,11 @@ public class EverydaySearch {
     this.createTime = createTime;
   }
 
+  public Map<Integer, String> getColorDict() {
+    return colorDict;
+  }
+
+  public void setColorDict(Map<Integer, String> colorDict) {
+    this.colorDict = colorDict;
+  }
 }
