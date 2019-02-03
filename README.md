@@ -6,7 +6,7 @@ a year in pixel for me
 - javax.servlet 3.1.0
 - apache-tomcat-8.5.23
 - Apache Maven 3.6.0
-- mysql 5.7
+- mysql 8.0.13
 - MacOS Mojave 10.14.2 (TODO: CentOS)
 
 ### mysql databases
