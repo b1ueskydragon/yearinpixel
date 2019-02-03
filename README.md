@@ -17,9 +17,9 @@ a year in pixel for me
 $ vi ${HOME_DIR}/apache-tomcat-8.5.23/conf/Catalina/localhost/yearinpixel.xml
 ```
 ```yearinpixel.xml
-<Context docBase="${HOME_DIR}/yearinpixel/target/yearinpixel"  reloadable="true">
+<Context docBase="${HOME_DIR}/yearinpixel/target/yearinpixel" reloadable="true">
         <Resource name="jdbc/yearinpixelDB" type="javax.sql.DataSource"
-        auth="Container" driverClassName="com.mysql.jdbc.Driver"
+        auth="Container" driverClassName="com.mysql.cj.jdbc.Driver"
         url="jdbc:mysql://localhost/yearinpixel_db?
         userUnicode=true&amp;charactorEncoding=UTF-8&amp;autoReconnect=true"
         username="${USERNAME}" password="${PASSWORD}" validationQuery="select CURRENT_TIMESTAMP" />
